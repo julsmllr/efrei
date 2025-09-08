@@ -209,35 +209,41 @@ rm est haché (/home/student/bin/rm)
 ### 6) 
 
 Après retrait de perm w, je ne peux plus "rm" (en réalité cat)
-Exo 8
+
+
+### 12)
+
+PATH prend en paramètres les chemins avec toutes les commandes internes disponibles
+
+## Exercice 8
 
 ### 1)
 
 `umask` renvoie 0002 
 
 
-Avec mask par défaut
+Avec mask par défaut : 
+```bash
 $ ls -ld rep f 
 -rw-rw-r-- 1 student student 0 sept.  8 16:23 f
 drwxrwxr-x 2 student student 6 sept.  8 16:23 rep
-
+```
 
 mask = 121
+```bash
 $ls -ld rep f 
 -rw-r--rw- 1 student student 0 sept.  8 16:24 f
 drw-r-xrw- 2 student student 6 sept.  8 16:24 rep
-
+```
 
 mask = 666
+```bash
 $ ls -ld rep f 
 ---------- 1 student student 0 sept.  8 16:26 f
 d--x--x--x 2 student student 6 sept.  8 16:26 rep
-
+```
 
 ### 2) Explications
 
 Le umask se soustrait aux perms de base. S'il vaut 1, on retire x, 2 on retire w, 3, on retire w et x, etc...
 
-### 12)
-
-PATH prend en paramètres les chemins avec toutes les commandes internes disponibles
