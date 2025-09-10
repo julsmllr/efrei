@@ -73,6 +73,9 @@ t_cell* searchValueListRec(t_list list, int valueToSearch) {
 
 ```
 
+---
+
+
 
 ## Exercice 4
 
@@ -115,6 +118,9 @@ void destroyListRec(t_list myList) {
 ```
 
 
+---
+
+
 ## Exercice 5
 
 1) Non, myList n'est pas modifié. Il y a que les value des cells qui sont modif
@@ -133,6 +139,9 @@ void flipVals(t_list myList) {
     }
 }
 ```
+
+---
+
 
 ## Exercice 6 : 
 
@@ -160,6 +169,22 @@ void deleteVal(t_list *myList, int valueToDelete) {
         myList->head = cellToDelete->next;
     }else {
 
+    }
+}
+```
+
+---
+
+## Exercice 7 
+
+Destroy All Value : 
+
+```c
+void deleteAllValFromlist(t_list* myList, int valueToDelete) {
+    if (myList != NULL && myList->head != NULL) {
+        while (searchValueListRec(*myList, valueToDelete) != NULL) {
+            deleteVal(myList, valueToDelete);
+        }
     }
 }
 ```
