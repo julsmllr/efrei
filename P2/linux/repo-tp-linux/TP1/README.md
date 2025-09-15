@@ -197,3 +197,35 @@ ls -l : Pour utiliser un format de listing long avec tous les droits
 rm -f : force le delete
 
 touch edit timestamps
+
+---
+
+## Exercice 7
+
+2.1
+`echo *` : liste tout les fichier
+`echo *_*` : liste tout les fichiers contenant un _ au milieu de son nom
+`echo [ab]*` : liste tout les fichiers où le nom commence par un a ou un b
+`echo [^ab]*` : liste tout les fichiers où le nom ne commence pas par un a ou un b
+`echo c*` : liste tout les fichier où le nom commence par c
+`echo ???????` : aucune idée
+
+2.2:
+`echo c*` a écrit c*
+`echo ??????` : liste tout les fichiers où le nom à le nombre exacte de caractère que de nombre de ?
+
+3.
+`ls *5`
+`ls annee4*`
+`ls annee4?`
+`ls annee[^0-9]*`
+`ls *ana*`
+`ls [Aa]*`
+`ls *[41]?`
+
+4.
+.cache/ .config/ .dbus/ .Desktop.accetto/ .emacs.d/ .gnupg/ .local/ .opam/ .vnc/
+.bash_history .bashrc .emacs .gtkrc-2.0 .ICEauthority .sudo_as_admin_sucessful .wget-hsts .Xauthority .xsession-errors
+
+5.
+stdc-predef.h stdint.h stdio_ext.h stdio.h stdlib.h
