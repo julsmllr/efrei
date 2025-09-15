@@ -130,4 +130,77 @@ et si on a une variables qui prend en compte des sauts de ligne, il faut le mett
 
 ---
 
-## Exercice 5 : 
+## Exercice 5 : Extensions de chemin
+
+
+`mv *.txt /files`
+`mv *.png /imgs`
+
+`rm -r dir`
+
+---
+
+## Exercice 6 : Extension accolade
+
+```bash
+$ echo {a,b,c,d} #Print a, b, c, d
+$ echo {a..d} # a b c d
+$ echo {a..d..2} #a c
+$ echo {1,2,3,4,5,6,7,8,9} #1, 2, 3, 4, 5, 6, 7, 8, 9
+$ echo {1..9} # 1 2 3 4 5 6 7 8 9
+$ echo {1..9..2} # 1 3 5 7 9
+```
+
+Ici, quand on met une virgule, cela représente les différents éléments que l'on veut prendre. A l'inverse lorsqu'on met .., on a juste a indiqué les limites et ça écrit l'ensemble. On peut également indiquer un pas à suivre (+2, +3)
+
+```bash
+$ echo {a..d}* #a* b* c* d*
+$ echo {a..d}.* #a.* b.* c.* d.*
+$ echo {a..d}.txt #a.txt b.txt c.txt d.txt
+```
+
+Créer les fichiers en une seule ligne 
+
+`touch file-{1..9}.txt`
+
+---
+
+## Exercice 7 : Substitution de commande simple 📚
+
+```bash
+$ date #Print la vraie date
+$ echo date #Print date
+$ echo $(date) #Print la vraie date
+$ aujourdhui=$(date) #Variable avec la vraie date
+$ echo $aujourdhui #print variables
+$ echo "Nous sommes le $(date)"
+```
+
+```bash
+$ prefix="Nous sommes le"
+$ echo $prefix $(date)
+$ echo $prefix $aujourdhui
+$ echo ${prefix} ${aujourdhui}
+$ phrase=${prefix} ${aujourdhui}
+$ phrase="${prefix} ${aujourdhui}"
+$ echo $phrase
+$ echo "$phrase"
+```
+
+Les "" permettent de faire des chaines de car
+
+**Différence** :
+On met $(commande) lorsque commande est une commande pas un variable
+On met ${commande} lorsque commande est une variable
+
+---
+
+## Exercice 8 : Substitution de commande imbriquée 📚📚📚
+
+Rien d'intéressant 
+
+---
+
+## Exercice 9 : GCC
+
+Tout est sur le TP, Rien d'intéressant
