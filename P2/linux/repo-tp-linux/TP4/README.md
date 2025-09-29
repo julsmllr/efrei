@@ -212,19 +212,18 @@ sleep 10
 
 Affiche la liste des processus rattachés au terminal :
 
+* `ps` : la commande en cours d'exécution.
+
 ```
 PID   TTY      TIME     CMD
 1234  pts/1    00:00:00 bash
 5678  pts/1    00:00:00 ps
 ```
 
-* `bash` : le shell (toujours présent).
-* `ps` : la commande en cours d'exécution.
 
 .b) `sleep 240`
 
 Exécute une pause de **240 secondes** (4 minutes). 👉 Pendant ce temps, le terminal est bloqué.
-
 
 .c) `Ctrl+Z`
 
